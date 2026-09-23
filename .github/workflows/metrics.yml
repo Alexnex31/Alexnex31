@@ -12,7 +12,8 @@ jobs:
     steps:
       - uses: lowlighter/metrics@latest
         with:
-          token: ${{ github.token }}
+          token: ${{ secrets.METRICS_TOKEN }}
+          committer_token: ${{ github.token }}
           user: ${{ github.repository_owner }}
           filename: metrics.svg
           base: header
